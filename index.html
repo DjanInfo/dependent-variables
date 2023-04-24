@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>How Does Feature Dependency Affect Configurable System Comprehensibility?</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body class="style.css">
+
+<table width="100%" border="0">
+
+  <tr>
+
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+
+    <td><table width="100%">
+
+      <tr>
+
+        <td width="200">&nbsp;</td>
+
+        <td width="625"><h2 align="center">An experiment on how dependent variables affect program comprehensibility</h2></td>
+
+        <td width="200">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><h3>Author : Anonymous</h3></td>
+
+      </tr>
+      <tr>
+        
+        <td colspan="3"><h3>Abstract :</h3></td>
+        
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table cellspacing="0" id="ec:table1" cellpadding="0">
+
+          <tbody>
+
+            <tr id="row18">
+
+              <td align="justify">\#ifdefs affect comprehensibility, especially when its use implies feature dependency. Feature dependencies differ from each other in terms of the types, number of dependent variables, the number of uses of each of these variables, variability, functions, data flow, control-flow, among others. The dependency between two features may include just one dependent variable or more than one. It is reasonable to suspect that a high number of dependent variables and their uses make the analysis of variability scenarios more complex. In this sense, it is also important to investigate if the comprehensibility of configurable systems varies  according to the number of dependent variables present in the source code. Thus, we analyzed how different numbers of dependent variables affected the comprehensibility of configurable systems. We executed a controlled experiment with 12 participants who analyzed programs trying to specify the output. We quantified comprehensibility using metrics based on time and tentative to answer tasks correctly, participants’ visual effort and participants' heart rate. Our results indicate that the higher the number of dependent variables the more difficult it was to understand programs with feature dependency.                <p>&nbsp;</p></td>
+
+            </tr>
+
+          </tbody>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">
+
+          <strong>Procedure:</strong>
+
+          <p> 1 -  we cleaned all material and equipment with alcohol gel and asked the participant to fill out a consent form; <br />
+
+2 - the participant put on the smartwatch;<br />
+
+3 - calibrate  eye-tracking and smartwatch devices;<br />
+4 -  we asked her or him to watch a two minute full-screen video of a fish swimming in an aquarium; <br />
+
+5 -   perform the task in order based in Latin square group; </p></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">Source codes of our experiment: </td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="1">
+
+          <tr>
+            <td colspan="3"><h4 align="center">SOURCE CODE OF PROGRAMS</h4></td>
+            </tr>
+          <tr>
+            <td width="40%"><p><em>Latin Square 2 x2:</em></p></td>
+            
+            <td width="29%"><h5>Domain 1: sale of property</h5></td>
+            
+            <td width="31%"><h5>Domains 2: grade calculation</h5></td>
+            
+            </tr>
+
+          <tr>
+
+            <td><strong>Developer  1</strong></td>
+
+            <td><a href="imagens/property2.png" target="_blank">+DV (Program 1)</a></td>
+
+            <td><a href="imagens/grade1.png" target="_blank">-DV (Program 3)</a></td>
+
+            </tr>
+
+          <tr>
+            
+            <td><strong>Developer 2</strong></td>
+            
+            <td><a href="imagens/property1.png" target="_blank">-DV (Program 2)</a></td>
+            
+            <td><a href="imagens/grade2.png" target="_blank">+DV (Program 4)</a></td>
+            
+          </tr>
+          <tr>
+            <td>LEGEND:</td>
+            <td>+DV (More Dependent Variable)</td>
+            <td>-DV (Fewer Dependent Variable)</td>
+          </tr>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="0">
+          <tr>
+            <td width="784"><table width="100%" border="1" cellspacing="1">
+              <tr>
+                <td colspan="3"><h4 align="center">TASKS OF PROGRAMS</h4></td>
+                </tr>
+              <tr>
+                <td width="25%"><h3>Tasks</h3></td>
+                <td width="33%"><h3><em><strong>with</strong> more dependent variable</em></h3></td>
+                <td><h3><em><strong>with fewer</strong> dependent variable</em></h3></td>
+                </tr>
+              <tr>
+                <td bgcolor="#DEDBD7">Domain 1 - sale of property</td>
+                <td bgcolor="#DEDBD7"><a href="tasks/taskP2.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+                <td bgcolor="#DEDBD7"><a href="tasks/taskP1.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+              </tr>
+              <tr>
+                <td>Domain 2 -   grade calculation</td>
+                <td><a href="tasks/taskP4.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+                <td><a href="tasks/taskP3.html" target="_blank">Task 1, Task 2 and Task 3</a></td>
+              </tr>
+              </table></td>
+          </tr>
+
+          </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="1">
+
+          <tr>
+
+            <td width="63%" align="center"><h3>Quantitative collected data </h3></td>
+
+            <td width="37%" align="center"><h3>Script R</h3></td>
+
+            </tr>
+
+          <tr>
+
+            <td><a href="r/time.txt" target="_blank">Indiviual time to specify the output</a> <br />
+
+            <td><a href="r/timeDV.txt" target="_blank">Time.R</a><a href="image/heat_global.jpg" target="_blank"></a></td>
+
+            </tr>
+
+          <tr>
+
+            <td>Correctly specify the output<br />
+
+              <a href="r/correctly.R" target="_blank"></a></td>
+
+            <td><a href="r/acertosDV.txt" target="_blank">Correctly.R</a></td>
+
+            </tr>
+
+          <tr>
+
+            <td><a href="r/fixacoes.txt" target="_blank">Individual number of fixations </a><br />
+
+              <a href="r/fixations.R" target="_blank"></a></td>
+
+            <td><a href="r/fixacoesDV.txt" target="_blank">Fixations.R</a><a href="image/heat_inter.jpg" target="_blank"></a></td>
+
+            </tr>
+          <tr>
+            <td>number of HRV</td>
+            <td><a href="r/hrvDV.txt" target="_blank">HRV.r</a></td>
+            </tr>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" cellspacing="1">
+
+          <tr>
+
+            <td width="33"><table width="100%" border="1">
+              <tr>
+                <td colspan="2"><h4 align="center">AOI OF PROGRAMS<span role="presentation" dir="ltr"></span></h4></td>
+              </tr>
+              <tr>
+                <td width="50%"><h5>Domain 1: sale of property</h5></td>
+                <td width="50%"><h5>Domains 2: grade calculation</h5></td>
+              </tr>
+              <tr>
+                <td><a href="imagens/AOIDomain1.png" target="_blank">Program 1 and Program 2</a></td>
+                <td><a href="imagens/AOIDomain2.png" target="_blank">Program 3 and Program 4</a></td>
+              </tr>
+            </table></td>
+
+            </tr>
+
+          </table></td>
+
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" border="1">
+          <tr>
+            <td colspan="2"><h4 align="center">PROGRAMS <span role="presentation" dir="ltr">HIGHLIGHTING VARIABLE </span>                <span role="presentation" dir="ltr">DEFINITIONS AND VARIABLE USAGES</span></h4></td>
+          </tr>
+          <tr>
+            <td width="50%"><h5>Domain 1: sale of property</h5></td>
+            <td width="50%"><h5>Domains 2: grade calculation</h5></td>
+          </tr>
+          <tr>
+            <td><a href="imagens/codigoDomain1.png" target="_blank">Program 1 and Program 2</a></td>
+            <td><a href="imagens/codigoDomain2.png" target="_blank">Program 3 and Program 4</a></td>
+          </tr>
+        </table></td>
+      </tr>
+
+    </table></td>
+
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+
