@@ -1,0 +1,11 @@
+caracteristic        HRV	     not HRV
+-VD			4		32
++VD			8		28
+
+mx <- matrix(c(4,32,8,28),ncol=2,byrow=T)
+chisq.test(mx)
+fisher.test(mx)
+
+mx <- matrix(c(4,8,8,4),ncol=2,byrow=T)
+chisq.test(mx)
+fisher.test(mx)

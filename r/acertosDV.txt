@@ -1,0 +1,7 @@
+caracteristic        correct	     wrong
+-VD			36		1
++VD			36		4
+
+mx <- matrix(c(36,1,36,4),ncol=2,byrow=T)
+chisq.test(mx)
+fisher.test(mx)
