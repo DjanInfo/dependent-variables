@@ -1,2 +1,2 @@
 # ESEM-dependent-variables
-An experiment on how dependent variables affect program comprehensibility
+An experiment on how dependent variables affect program comprehensibility.
