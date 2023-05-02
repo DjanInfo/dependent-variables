@@ -1,11 +1,19 @@
-caracteristic        HRV	     not HRV
--VD			4		32
-+VD			8		28
+hrv <- c(0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1 , 0, 0, 0)
+domain <- c("D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D1", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2", "D2")
+caracteristic <- c("-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "-VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD", "+VD") 
+group <- c("P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6", "P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6","P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6","P1", "P1", "P1", "P2", "P2", "P2", "P3", "P3", "P3", "P4", "P4", "P4", "P5", "P5", "P5", "P6", "P6", "P6")
 
-mx <- matrix(c(4,32,8,28),ncol=2,byrow=T)
-chisq.test(mx)
-fisher.test(mx)
+LS <- data.frame(group, domain, caracteristic , hrv)
+str(LS)
+summary(LS)
 
-mx <- matrix(c(4,8,8,4),ncol=2,byrow=T)
-chisq.test(mx)
-fisher.test(mx)
+LS.m1 <- tapply (hrv, caracteristic , mean)
+LS.m1
+
+LS.m2 <- tapply (hrv, domain, mean)
+LS.m2
+
+LS.av <- aov(hrv ~ caracteristic + group + domain)
+anova(LS.av)
+
+TukeyHSD(LS.av)
